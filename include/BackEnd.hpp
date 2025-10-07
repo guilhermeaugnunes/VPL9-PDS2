@@ -2,14 +2,15 @@
 #define BACKEND_HPP
 
 #include "Desenvolvedor.hpp"
+#include <string>
 
-class BackEnd  : public virtual Desenvolvedor {
+namespace GestaoTarefas {
 
-    public:
-        BackEnd(const int cpf, const std::string& nome, const int idade, const std::string& funcao);
-
-        void executarFuncao() override;
-
-};
-
+    class BackEnd  : public virtual Desenvolvedor {
+        public:
+            BackEnd(const int cpf, const std::string& nome, const int idade, const std::string& funcao);
+            void executarFuncao() override;
+    };
+    
+}
 #endif

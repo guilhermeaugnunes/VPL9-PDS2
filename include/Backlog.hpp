@@ -3,6 +3,8 @@
 #include "Tarefa.hpp"
 #include <vector>
 
+namespace GestaoTarefas {
+
     class Backlog {
         private: 
             std::vector<Tarefa> _tarefas;
@@ -14,4 +16,5 @@
             Tarefa* obterMaiorPeso();
     };
 
+}
 #endif

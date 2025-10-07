@@ -11,6 +11,7 @@
 #include "Gerente.hpp"
 #include "Tarefa.hpp"
 
+using namespace GestaoTarefas;
 
 int main() {
     std::cout << "--- INICIANDO SIMULACAO DO SISTEMA ---" << std::endl;

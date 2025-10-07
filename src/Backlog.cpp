@@ -3,6 +3,7 @@
 #include <vector>
 #include <stdexcept>
 
+namespace GestaoTarefas {
 
     Backlog::Backlog() {}
 
@@ -50,3 +51,5 @@
 
         return &_tarefas[indiceTarefa];
     }
+
+}

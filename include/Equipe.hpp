@@ -5,23 +5,26 @@
 #include "Funcionario.hpp"
 #include <string>
 
-class Equipe {
+namespace GestaoTarefas {
 
-    private:
-        bool _status;
-        Gerente* _gerente;
-        std::vector<Funcionario*> _funcionarios;
-        int _id;
+    class Equipe {
 
-    public: 
-        Equipe(int id, Gerente* gerente, const std::vector<Funcionario*>& funcionarios);
-        void imprimirEquipe() const;
-        std::vector<Funcionario*>& getFuncionarios();
-        Gerente* getGerente() const;
-        int getId() const;
-        bool getDisponivel() const;
-        void setDisponivel(bool status);
+        private:
+            bool _status;
+            Gerente* _gerente;
+            std::vector<Funcionario*> _funcionarios;
+            int _id;
 
-};
+        public: 
+            Equipe(int id, Gerente* gerente, const std::vector<Funcionario*>& funcionarios);
+            void imprimirEquipe() const;
+            std::vector<Funcionario*>& getFuncionarios();
+            Gerente* getGerente() const;
+            int getId() const;
+            bool getDisponivel() const;
+            void setDisponivel(bool status);
 
+    };
+
+}
 #endif

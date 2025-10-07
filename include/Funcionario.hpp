@@ -2,6 +2,8 @@
 #define FUNCIONARIO_HPP
 #include <string>
 
+namespace GestaoTarefas {
+
     class Funcionario {
         private:
             int _cpf;
@@ -27,4 +29,5 @@
             virtual void executarFuncao() = 0;
     };
 
-    #endif
+}
+#endif

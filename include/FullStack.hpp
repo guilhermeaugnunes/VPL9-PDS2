@@ -3,6 +3,8 @@
 #include "BackEnd.hpp"
 #include "FrontEnd.hpp"
 
+namespace GestaoTarefas {
+
     class FullStack  : public BackEnd,  public FrontEnd {
 
         public:
@@ -12,4 +14,5 @@
 
     };
 
+}
 #endif

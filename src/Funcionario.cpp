@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 
+namespace GestaoTarefas {
+
     Funcionario::Funcionario(const int cpf, const std::string& nome, const int idade, const std::string& funcao) :
         _cpf(cpf), _nome(nome), _idade(idade), _funcao(funcao) {}
 
@@ -34,3 +36,5 @@
     void Funcionario::setFuncao(const std::string& funcao) {
         this-> _funcao = funcao;
     }
+
+}

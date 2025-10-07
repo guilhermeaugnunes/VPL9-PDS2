@@ -3,35 +3,39 @@
 #include <vector>
 #include <string>
 
-Equipe::Equipe(int id, Gerente* gerente, const std::vector<Funcionario*>& funcionarios) :
-    _id(id), _gerente(gerente), _funcionarios(funcionarios), _status(true) {}
+namespace GestaoTarefas {
 
-void Equipe::imprimirEquipe() const {
-    std::cout << "Status da Equipe: " << _status << std::endl; 
-    std::cout << "Gerente: " << _gerente->getNome() << std::endl; 
+    Equipe::Equipe(int id, Gerente* gerente, const std::vector<Funcionario*>& funcionarios) :
+        _id(id), _gerente(gerente), _funcionarios(funcionarios), _status(true) {}
 
-    std::cout << "Membros:" << std::endl;
-    for (Funcionario* func : _funcionarios) {
-        std::cout << "Nome: " << func->getNome() << std::endl;
-        std::cout << "Funcao: "<< func->getFuncao() << std::endl;
+    void Equipe::imprimirEquipe() const {
+        std::cout << "Status da Equipe: " << _status << std::endl; 
+        std::cout << "Gerente: " << _gerente->getNome() << std::endl; 
+
+        std::cout << "Membros:" << std::endl;
+        for (Funcionario* func : _funcionarios) {
+            std::cout << "Nome: " << func->getNome() << std::endl;
+            std::cout << "Funcao: "<< func->getFuncao() << std::endl;
+        }
     }
-}
 
-std::vector<Funcionario*>&Equipe::getFuncionarios() {
-    return this-> _funcionarios;
-}
+    std::vector<Funcionario*>&Equipe::getFuncionarios() {
+        return this-> _funcionarios;
+    }
 
-Gerente* Equipe::getGerente() const {
-    return this-> _gerente;
-}
+    Gerente* Equipe::getGerente() const {
+        return this-> _gerente;
+    }
 
-int Equipe::getId() const {
-    return this-> _id;
-}
+    int Equipe::getId() const {
+        return this-> _id;
+    }
 
-bool Equipe::getDisponivel() const {
-    return this-> _status;
-}
-void Equipe::setDisponivel(bool status) {
-    this-> _status = status;
+    bool Equipe::getDisponivel() const {
+        return this-> _status;
+    }
+    void Equipe::setDisponivel(bool status) {
+        this-> _status = status;
+    }
+
 }

@@ -12,6 +12,8 @@
 #include "Tarefa.hpp"
 #include <vector>
 
+namespace GestaoTarefas {
+
     class SistemaDistribuicao {
         private: 
             SistemaDistribuicao ();
@@ -38,8 +40,7 @@
             void desfazerEquipe(int idEquipe);
             void demiteFuncionario(int cpf);
             void adicionarFuncionario(Funcionario* funcionario);
-
-            
     };
 
+}
 #endif

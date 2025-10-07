@@ -3,13 +3,14 @@
 
 #include "Funcionario.hpp"
 
-class Desenvolvedor  : public virtual Funcionario {
+namespace GestaoTarefas {
 
-    public:
-        Desenvolvedor(const int cpf, const std::string& nome, const int idade, const std::string& funcao);
-        void executarFuncao() override = 0;
-        virtual ~Desenvolvedor();
+    class Desenvolvedor  : public virtual Funcionario {
+        public:
+            Desenvolvedor(const int cpf, const std::string& nome, const int idade, const std::string& funcao);
+            void executarFuncao() override = 0;
+            virtual ~Desenvolvedor();
+    };
 
-
-};
+}
 #endif

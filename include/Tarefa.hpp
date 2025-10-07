@@ -3,6 +3,8 @@
 #include "Equipe.hpp"
 #include <string>
 
+namespace GestaoTarefas {
+
     class Tarefa {
         private: 
             int _id;
@@ -22,4 +24,5 @@
             void setPeso(int novoPeso);
     };
 
+}
 #endif

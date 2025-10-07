@@ -2,13 +2,13 @@
 #define FRONTEND_HPP
 #include "Desenvolvedor.hpp"
 
-class FrontEnd  : public virtual Desenvolvedor {
+namespace GestaoTarefas {
 
-    public:
-        FrontEnd(const int cpf, const std::string& nome, const int idade, const std::string& funcao);
+    class FrontEnd  : public virtual Desenvolvedor {
+        public:
+            FrontEnd(const int cpf, const std::string& nome, const int idade, const std::string& funcao);
+            void executarFuncao() override;
+    };
 
-        void executarFuncao() override;
-
-};
-
+}
 #endif
