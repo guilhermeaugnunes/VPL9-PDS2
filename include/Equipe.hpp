@@ -14,7 +14,7 @@ class Equipe {
         int _id;
 
     public: 
-        Equipe(Gerente* gerente, const std::vector<Funcionario*>& funcionarios);
+        Equipe(int id, Gerente* gerente, const std::vector<Funcionario*>& funcionarios);
         void imprimirEquipe() const;
         std::vector<Funcionario*>& getFuncionarios();
         Gerente* getGerente() const;

@@ -30,8 +30,12 @@ void SistemaDistribuicao::visualizarOciosos() const {
 } 
 
 void SistemaDistribuicao::visualizarEquipes() const {
-    for (size_t i = 0; i < _equipes.size(); i++) {
-        _equipes[i].imprimirEquipe();
+    if (!_equipes.empty()) {
+        for (size_t i = 0; i < _equipes.size(); i++) {
+            _equipes[i].imprimirEquipe();
+        }
+    } else {
+        std::cout << "Não há equipes no momento" << std::endl;
     }
 }
 
@@ -121,7 +125,8 @@ void SistemaDistribuicao::criarEquipe(int qtdeDesenvolvedores, int qtdeEngenheir
             membrosNovaEquipe.push_back(engenheirosSoftwareOciosos[i]); 
         }
 
-        Equipe novaEquipe(gerentesEscolhido, membrosNovaEquipe);
+        Equipe novaEquipe(_proximoIdEquipe, gerentesEscolhido, membrosNovaEquipe);
+        _proximoIdEquipe++;
         _equipes.push_back(novaEquipe);
         std::vector <Funcionario*> novosFuncionariosOciosos;
 

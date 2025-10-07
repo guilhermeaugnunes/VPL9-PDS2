@@ -3,8 +3,8 @@
 #include <vector>
 #include <string>
 
-Equipe::Equipe(Gerente* gerente, const std::vector<Funcionario*>& funcionarios) :
-    _gerente(gerente), _funcionarios(funcionarios), _status(true) {}
+Equipe::Equipe(int id, Gerente* gerente, const std::vector<Funcionario*>& funcionarios) :
+    _id(id), _gerente(gerente), _funcionarios(funcionarios), _status(true) {}
 
 void Equipe::imprimirEquipe() const {
     std::cout << "Status da Equipe: " << _status << std::endl; 

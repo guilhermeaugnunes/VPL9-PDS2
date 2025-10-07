@@ -21,6 +21,7 @@
             std::vector<Tarefa> _tarefasConcluidas;
             std::vector<Tarefa> _tarefasEmAndamento;
             Backlog _backlog;
+            int _proximoIdEquipe = 1;
             
         public: 
             ~SistemaDistribuicao();
